@@ -1,65 +1,51 @@
-/* glance · design tokens · "Dark lab console"
-   One accent family (ice blue). Everything else is white, grey and hairlines.
-   Depth = 1px low-opacity borders, faint glows, layering. No shadows, no card gradients. */
+/* glance · tokens v2 · "Editorial instrument"
+   Warm graphite and bone. One brass accent. Serif for voice, sans for interface.
+   Square corners, 1px rules, no glows, no blur. Depth comes from contrast between dark site and light sheet. */
 
+@font-face { font-family: "Newsreader"; src: url("fonts/newsreader-latin.woff2") format("woff2"); font-weight: 300 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("fonts/newsreader-italic-latin.woff2") format("woff2"); font-weight: 300 500; font-style: italic; font-display: swap; }
 @font-face { font-family: "Geist"; src: url("fonts/geist-latin.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
 @font-face { font-family: "Geist Mono"; src: url("fonts/geist-mono-latin.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
 
 :root {
-  /* ---- colour: surfaces (deep blue-black, never pure #000) ---- */
-  --bg:        #06080c;
-  --bg-raised: #0a0e14;
-  --surface:   #0d1219;
-  --surface-2: #121924;
+  /* surfaces */
+  --bg: #0b0a09; --bg-raised: #12100e; --surface: #161411;
+  /* text (AA on --bg) */
+  --text: #efe9de; --text-2: #b3ab9d; --text-3: #8f8878;
+  /* accent: brass */
+  --accent: #d6a64f; --accent-2: #b98a35; --accent-fill: #e2b25a; --accent-ink: #17110a;
+  --accent-dim: rgba(214, 166, 79, .12); --accent-line: rgba(214, 166, 79, .55);
+  /* rules */
+  --line: rgba(239, 233, 222, .10); --line-2: rgba(239, 233, 222, .18);
 
-  /* ---- colour: text (all pass WCAG AA on --bg) ---- */
-  --text:      #eef3f8;   /* 18.0:1  headings, bold verbs */
-  --text-2:    #aab5c3;   /*  9.6:1  body */
-  --text-3:    #7e8a9a;   /*  5.7:1  labels, captions */
-
-  /* ---- colour: accent family (ice blue) ---- */
-  --accent:      #8ccbff;                    /* headlines, links, dots */
-  --accent-2:    #5ea6e6;                    /* quieter strokes, chart marks */
-  --accent-fill: #cfe8ff;                    /* primary button fill */
-  --accent-ink:  #06121f;                    /* text on the fill */
-  --accent-dim:  rgba(140, 203, 255, .14);   /* tinted cells */
-  --accent-line: rgba(140, 203, 255, .42);   /* glowing borders */
-  --glow:        0 0 0 1px rgba(140, 203, 255, .10), 0 0 64px rgba(140, 203, 255, .14);
-
-  /* ---- borders (hairlines: white at 6-14%) ---- */
-  --line:   rgba(255, 255, 255, .08);
-  --line-2: rgba(255, 255, 255, .14);
-
-  /* ---- type: two families only ---- */
+  /* type */
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
   --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --fs-hero: clamp(3.1rem, 7.4vw, 7rem);
+  --fs-h2: clamp(2.3rem, 4.6vw, 4rem);
+  --fs-stage: clamp(1.7rem, 2.6vw, 2.4rem);
+  --fs-lede: clamp(1.1rem, 1.5vw, 1.3rem);
+  --fs-body: 1rem; --fs-small: .875rem; --fs-label: .72rem; --fs-micro: .7rem;
+  --w-display: 300;
 
-  --fs-hero:    clamp(3rem, 8.2vw, 7.4rem);    /* weight 200-300, tracking -0.05em */
-  --fs-title:   clamp(3rem, 6.6vw, 6rem);      /* stage titles, weight 200 */
-  --fs-tagline: clamp(1.2rem, 1.9vw, 1.65rem); /* weight 450, accent */
-  --fs-body:    1rem;
-  --fs-small:   .875rem;
-  --fs-mono:    .78rem;                        /* nav, buttons, pills */
-  --fs-micro:   .7rem;                         /* chart and table labels */
-
-  --w-thin: 200; --w-light: 300; --w-reg: 400; --w-med: 500; --w-semi: 600;
-  --track-display: -0.05em; --track-tight: -0.02em; --track-mono: 0.01em;
-
-  /* ---- spacing (4px base) ---- */
-  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 24px;
-  --s-6: 32px; --s-7: 48px; --s-8: 72px; --s-9: 112px; --s-10: 160px;
-
-  /* ---- radii: one small, one large ---- */
-  --r-sm: 8px;    /* buttons, pills, table cells */
-  --r-lg: 20px;   /* cards, the product mock */
-
-  /* ---- motion ---- */
-  --ease: cubic-bezier(.22, .8, .2, 1);
-  --t-1: 200ms; --t-2: 300ms; --t-3: 400ms;
-
+  /* spacing (4px base) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 72px; --s-9: 112px; --s-10: 160px;
+  /* radius: square */
+  --r: 2px;
+  /* motion */
+  --ease: cubic-bezier(.2, .7, .2, 1); --t-1: 180ms; --t-2: 300ms; --t-3: 500ms;
+  --wrap: 1240px;
   color-scheme: dark;
 }
+@media (prefers-reduced-motion: reduce) { :root { --t-1: 0ms; --t-2: 0ms; --t-3: 0ms; } }
 
-@media (prefers-reduced-motion: reduce) {
-  :root { --t-1: 0ms; --t-2: 0ms; --t-3: 0ms; }
+/* The light "sheet": a printed page set into the dark site. Re-maps the same tokens. */
+.sheet {
+  --bg: #ece6d8; --bg-raised: #e3dccb; --surface: #f4efe3;
+  --text: #161410; --text-2: #4a463d; --text-3: #6b665b;
+  --accent: #8a5a0d; --accent-2: #7a5008; --accent-fill: #8a5a0d; --accent-ink: #f4efe3;
+  --accent-dim: rgba(138, 90, 13, .10); --accent-line: rgba(138, 90, 13, .55);
+  --line: rgba(22, 20, 16, .12); --line-2: rgba(22, 20, 16, .22);
+  color-scheme: light;
 }

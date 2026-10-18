@@ -10,64 +10,44 @@
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
-
-<header class="topbar">
- <a class="logo" href="#top" aria-label="glance, home"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.2" fill="currentColor" style="fill:var(--accent)"/></svg>glance</a>
+<header class="top"><div class="top-in">
+ <a class="mark" href="#top" aria-label="glance, home">glance<i aria-hidden="true"></i></a>
  <nav class="nav" aria-label="Primary">
-  <a href="#process">Process</a>
-  <a href="#examples">Examples</a>
-  <a href="#install">Install</a>
-  <div class="dd" id="dd"><button type="button" aria-haspopup="true" aria-expanded="false">Docs <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5L5 7l3.5-3.5"/></svg></button>
-   <div class="dd-menu" role="menu">
-    <a role="menuitem" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/SKILL.md" target="_blank" rel="noopener">SKILL.md <span aria-hidden="true">&#8599;</span></a>
-    <a role="menuitem" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/references/quiz.md" target="_blank" rel="noopener">Quiz <span aria-hidden="true">&#8599;</span></a>
-    <a role="menuitem" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/references/components.md" target="_blank" rel="noopener">Components <span aria-hidden="true">&#8599;</span></a>
-   </div>
-  </div>
+  <a href="#process">Process</a><a href="#examples">Examples</a><a href="#install">Install</a>
+  <a href="https://github.com/SystemDZ/glance/blob/main/skills/glance/SKILL.md" target="_blank" rel="noopener">Docs</a>
+  <a class="btn" href="#install">Install <span class="arr" aria-hidden="true">→</span></a>
  </nav>
- <div class="top-actions">
-  <a class="btn ghost" href="https://github.com/SystemDZ/glance" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">&#8599;</span></a>
-  <a class="btn primary" href="#install">Install <span class="arr" aria-hidden="true">&#8599;</span></a>
- </div>
-</header>
+</div></header>
 
 <main id="top">
 <section class="hero" aria-labelledby="hero-h">
- <div class="hero-rings" aria-hidden="true"><svg viewBox="0 0 1000 1000"><circle cx="500" cy="500" r="480"/><circle class="m" cx="500" cy="500" r="380"/><circle cx="500" cy="500" r="280"/><circle cx="500" cy="500" r="180"/></svg></div>
- <div class="hero-glow" aria-hidden="true"></div>
- <div class="hero-inner">
-  <h1 id="hero-h" class="rise">Answers you can read <br>at a glance.</h1>
-  <p class="rise d1">A skill for AI agents that learns how you like to read.</p>
-  <div class="hero-cta rise d2"><a class="btn primary" href="#install">Install <span class="arr" aria-hidden="true">&#8599;</span></a><a class="btn" href="#examples">See examples <span class="arr" aria-hidden="true">&#8599;</span></a></div>
+ <div class="cols" aria-hidden="true"><div></div></div>
+ <div class="hero-in">
+  <div>
+   <span class="eyebrow rise">A skill for AI agents</span>
+   <h1 id="hero-h" class="rise d1">Answers you can read at a <em>glance</em>.</h1>
+   <p class="lede rise d2">It learns how you like to read, then answers in short structured text, or in a clean page when the job is large.</p>
+   <div class="hero-cta rise d3"><a class="btn primary" href="#install">Install <span class="arr" aria-hidden="true">→</span></a><a class="btn" href="#examples">See the examples <span class="arr" aria-hidden="true">→</span></a></div>
+   <p class="fine rise d3">Free and open source. Python 3, no packages.</p>
+  </div>
+  <figure class="scan rise d2" id="scan" aria-label="A long answer reduced to the lines that matter">
+   <div class="scan-bar"><span>Typical answer</span><span><b>186</b> words</span></div>
+   <div class="scan-body"><div class="beam" id="beam"></div><i class="ln" style="--w:94%"></i><i class="ln" style="--w:88%"></i><i class="ln" style="--w:92%"></i><i class="ln key" style="--w:64%" data-label="Answer"></i><i class="ln gap"></i><i class="ln" style="--w:90%"></i><i class="ln" style="--w:86%"></i><i class="ln" style="--w:93%"></i><i class="ln key" style="--w:58%" data-label="Warning"></i><i class="ln gap"></i><i class="ln" style="--w:91%"></i><i class="ln" style="--w:84%"></i><i class="ln" style="--w:89%"></i><i class="ln" style="--w:72%"></i><i class="ln gap"></i><i class="ln" style="--w:88%"></i><i class="ln key" style="--w:60%" data-label="Next step"></i><i class="ln" style="--w:82%"></i></div>
+   <div class="scan-bar"><span>What glance keeps</span><span class="kept"><b id="kept">3</b> lines</span></div>
+  </figure>
  </div>
- <div class="cue" aria-hidden="true"></div>
 </section>
 
-<div id="process"><section class="lc" id="lifecycle" aria-labelledby="lc-h">
- <h2 class="sr-only" id="lc-h">How glance works, in five stages</h2>
- <div class="lc-sticky">
-  <div class="lc-ring" aria-hidden="false">
-   <svg viewBox="0 0 260 260" aria-hidden="true">
-    <circle class="ring-main" cx="130" cy="130" r="100"/>
-    <circle class="ring-soft" cx="130" cy="130" r="86"/>
-    <circle class="ring-soft" cx="130" cy="130" r="70"/>
-    <circle class="ring-soft" cx="130" cy="130" r="54"/>
-    <circle class="ring-ticks" id="ticks" cx="130" cy="130" r="106"/>
-   </svg>
-   <div class="lc-link" aria-hidden="true"></div>
-   <button class="pill" type="button" data-i="0" aria-label="Stage 1: Ask"><span class="pill-label"><b>01</b>Ask</span><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h11M19 17h1"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="17" r="2"/></svg></span></button><button class="pill" type="button" data-i="1" aria-label="Stage 2: Decide"><span class="pill-label"><b>02</b>Decide</span><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 9-8 9-8-9z"/></svg></span></button><button class="pill" type="button" data-i="2" aria-label="Stage 3: Answer"><span class="pill-label"><b>03</b>Answer</span><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h13"/></svg></span></button><button class="pill" type="button" data-i="3" aria-label="Stage 4: Build"><span class="pill-label"><b>04</b>Build</span><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></span></button><button class="pill" type="button" data-i="4" aria-label="Stage 5: Open"><span class="pill-label"><b>05</b>Open</span><span class="node"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16L16 8M9 8h7v7"/></svg></span></button>
-  </div>
-  <div class="lc-stages">
-   <article class="lc-stage is-active" data-i="0" aria-label="Ask">
-    <div class="mini-ring" aria-hidden="true"><span class="on" style="--a:0deg"></span><span class="" style="--a:24deg"></span><span class="" style="--a:48deg"></span><span class="cap" style="--a:0deg">01 · Ask</span></div>
-    <div class="lc-text">
-     <p class="lc-count">01 / 05</p>
-     <h3 class="lc-title">Ask</h3>
-     <p class="lc-tag">Teach it how you read, once.</p>
-     <ul class="lc-list"><li><b>Choose</b> how long answers should be, from one line to full detail.</li><li><b>Pick</b> one step at a time, or everything at once.</li><li><b>Set</b> when a visual page beats text.</li></ul>
-     <div class="lc-actions"><a class="btn" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/references/quiz.md" target="_blank" rel="noopener">Quiz wording <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/SystemDZ/glance#install" target="_blank" rel="noopener">Install <span class="arr" aria-hidden="true">↗</span></a></div>
-    </div>
-    <div class="lc-mock"><div class="app" aria-hidden="true">
+<section class="proc" id="process" aria-labelledby="proc-h">
+ <div class="proc-sticky">
+  <div class="proc-left">
+   <div><span class="eyebrow">The process</span><h2 class="h2" id="proc-h">Five steps. One <em>reading</em>.</h2></div>
+   <div class="prog" aria-hidden="true"><i></i></div>
+   <ol class="stages">
+    <li class="stage is-active" data-i="0">
+     <button class="stage-head" type="button" aria-expanded="true"><span class="num">01</span><span class="name">Ask</span></button>
+     <div class="stage-body"><div><div class="stage-inner"><p class="tagline">Teach it how you read, once.</p><ul class="bul"><li><b>Choose</b> how long answers should be, from one line to full detail.</li><li><b>Pick</b> one step at a time, or everything at once.</li><li><b>Set</b> when a visual page beats text.</li></ul><div class="links"><a class="link" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/references/quiz.md" target="_blank" rel="noopener">Quiz wording <span class="arr" aria-hidden="true">→</span></a><a class="link" href="#install">Install <span class="arr" aria-hidden="true">→</span></a></div></div></div></div>
+     <div class="sheet-wrap"><div class="sheet"><div class="app" aria-hidden="true">
  <div class="app-bar"><i></i><i></i><i></i><span>glance · quiz</span><em>quick setup · 4 of 4</em></div>
  <div class="app-body">
   <div class="qrow"><span class="n">01</span><div><p>How long should chat answers be?</p><div class="seg"><span class="">One line</span><span class="on">Short</span><span class="">Medium</span><span class="">Detailed</span></div></div></div>
@@ -78,18 +58,12 @@
   <span class="k">"visual"</span>: { <span class="k">"trigger"</span>: <span class="s">"complex"</span>, <span class="k">"theme"</span>: <span class="s">"auto"</span> } }</pre>
  </div>
  <div class="app-foot"><span>~/.glance/preferences.json</span><span class="ok">● saved</span></div>
-</div></div>
-   </article>
-   <article class="lc-stage" data-i="1" aria-label="Decide">
-    <div class="mini-ring" aria-hidden="true"><span class="" style="--a:-24deg"></span><span class="on" style="--a:0deg"></span><span class="" style="--a:24deg"></span><span class="" style="--a:48deg"></span><span class="cap" style="--a:0deg">02 · Decide</span></div>
-    <div class="lc-text">
-     <p class="lc-count">02 / 05</p>
-     <h3 class="lc-title">Decide</h3>
-     <p class="lc-tag">Text or page, by a rule you can read.</p>
-     <ul class="lc-list"><li><b>Count</b> steps, options and values to copy in the answer.</li><li><b>Keep</b> yes/no answers and quick fixes as short text.</li><li><b>Escalate</b> anything with four steps or more to a page.</li></ul>
-     <div class="lc-actions"><a class="btn" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/SKILL.md" target="_blank" rel="noopener">The rubric <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="#examples">Examples <span class="arr" aria-hidden="true">↗</span></a></div>
-    </div>
-    <div class="lc-mock"><div class="app" aria-hidden="true">
+</div></div></div>
+    </li>
+    <li class="stage" data-i="1">
+     <button class="stage-head" type="button" aria-expanded="false"><span class="num">02</span><span class="name">Decide</span></button>
+     <div class="stage-body"><div><div class="stage-inner"><p class="tagline">Text or page, by a rule you can read.</p><ul class="bul"><li><b>Count</b> steps, options and values to copy in the answer.</li><li><b>Keep</b> yes/no answers and quick fixes as short text.</li><li><b>Escalate</b> anything with four steps or more to a page.</li></ul><div class="links"><a class="link" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/SKILL.md" target="_blank" rel="noopener">The rubric <span class="arr" aria-hidden="true">→</span></a><a class="link" href="#examples">Examples <span class="arr" aria-hidden="true">→</span></a></div></div></div></div>
+     <div class="sheet-wrap"><div class="sheet"><div class="app" aria-hidden="true">
  <div class="app-bar"><i></i><i></i><i></i><span>glance · rubric</span><em>domain-checklist</em></div>
  <div class="app-body">
   <span class="lbl">Signals found in this answer</span>
@@ -103,18 +77,12 @@
   <div class="verdict"><b>Build a page</b><span>2 strong · 1 weak<br>rule: 1 strong, or 2 weak</span></div>
  </div>
  <div class="app-foot"><span>trigger: complex</span><span class="ok">● decided in 0.1 s</span></div>
-</div></div>
-   </article>
-   <article class="lc-stage" data-i="2" aria-label="Answer">
-    <div class="mini-ring" aria-hidden="true"><span class="" style="--a:-48deg"></span><span class="" style="--a:-24deg"></span><span class="on" style="--a:0deg"></span><span class="" style="--a:24deg"></span><span class="" style="--a:48deg"></span><span class="cap" style="--a:0deg">03 · Answer</span></div>
-    <div class="lc-text">
-     <p class="lc-count">03 / 05</p>
-     <h3 class="lc-title">Answer</h3>
-     <p class="lc-tag">Short, structured, one step at a time.</p>
-     <ul class="lc-list"><li><b>Lead</b> with the verdict, never a preamble.</li><li><b>Show</b> values in tables and code, not inside sentences.</li><li><b>Wait</b> for “done” before sending the next step.</li></ul>
-     <div class="lc-actions"><a class="btn" href="#examples">Bad vs good <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/SKILL.md" target="_blank" rel="noopener">SKILL.md <span class="arr" aria-hidden="true">↗</span></a></div>
-    </div>
-    <div class="lc-mock"><div class="app" aria-hidden="true">
+</div></div></div>
+    </li>
+    <li class="stage" data-i="2">
+     <button class="stage-head" type="button" aria-expanded="false"><span class="num">03</span><span class="name">Answer</span></button>
+     <div class="stage-body"><div><div class="stage-inner"><p class="tagline">Short, structured, one step at a time.</p><ul class="bul"><li><b>Lead</b> with the verdict, never a preamble.</li><li><b>Show</b> values in tables and code, not inside sentences.</li><li><b>Wait</b> for “done” before sending the next step.</li></ul><div class="links"><a class="link" href="#examples">Typical vs glance <span class="arr" aria-hidden="true">→</span></a><a class="link" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/SKILL.md" target="_blank" rel="noopener">SKILL.md <span class="arr" aria-hidden="true">→</span></a></div></div></div></div>
+     <div class="sheet-wrap"><div class="sheet"><div class="app" aria-hidden="true">
  <div class="app-bar"><i></i><i></i><i></i><span>chat</span><em>style: short · one step at a time</em></div>
  <div class="app-body">
   <div class="msg user">How do I connect my domain to my new site?</div>
@@ -128,18 +96,12 @@
   <div class="stats"><span><b>38</b> words</span><span>≈ <b>10</b> sec to read</span><span>vs <b>185</b> words typical</span></div>
  </div>
  <div class="app-foot"><span>answer first · values in tables · one question</span><span class="ok">● short</span></div>
-</div></div>
-   </article>
-   <article class="lc-stage" data-i="3" aria-label="Build">
-    <div class="mini-ring" aria-hidden="true"><span class="" style="--a:-48deg"></span><span class="" style="--a:-24deg"></span><span class="on" style="--a:0deg"></span><span class="" style="--a:24deg"></span><span class="cap" style="--a:0deg">04 · Build</span></div>
-    <div class="lc-text">
-     <p class="lc-count">04 / 05</p>
-     <h3 class="lc-title">Build</h3>
-     <p class="lc-tag">A clean page from ten lines of HTML.</p>
-     <ul class="lc-list"><li><b>Write</b> only the body. The design system does the rest.</li><li><b>Copy</b> buttons, hands-off boxes, light and dark themes.</li><li><b>Stay</b> offline: no fonts or scripts from the web.</li></ul>
-     <div class="lc-actions"><a class="btn" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/references/components.md" target="_blank" rel="noopener">Components <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/SystemDZ/glance/tree/main/skills/glance" target="_blank" rel="noopener">Source <span class="arr" aria-hidden="true">↗</span></a></div>
-    </div>
-    <div class="lc-mock"><div class="app" aria-hidden="true">
+</div></div></div>
+    </li>
+    <li class="stage" data-i="3">
+     <button class="stage-head" type="button" aria-expanded="false"><span class="num">04</span><span class="name">Build</span></button>
+     <div class="stage-body"><div><div class="stage-inner"><p class="tagline">A clean page from ten lines of HTML.</p><ul class="bul"><li><b>Write</b> only the body. The design system does the rest.</li><li><b>Copy</b> buttons, hands-off boxes, light and dark themes.</li><li><b>Stay</b> offline: no fonts or scripts from the web.</li></ul><div class="links"><a class="link" href="https://github.com/SystemDZ/glance/blob/main/skills/glance/references/components.md" target="_blank" rel="noopener">Components <span class="arr" aria-hidden="true">→</span></a><a class="link" href="https://github.com/SystemDZ/glance/tree/main/skills/glance" target="_blank" rel="noopener">Source <span class="arr" aria-hidden="true">→</span></a></div></div></div></div>
+     <div class="sheet-wrap"><div class="sheet"><div class="app" aria-hidden="true">
  <div class="app-bar"><i></i><i></i><i></i><span>body.html → page</span><em>10 lines in, one page out</em></div>
  <div class="app-body">
   <div class="split">
@@ -160,18 +122,12 @@
   </div>
  </div>
  <div class="app-foot"><span>offline · no fonts or scripts from the web</span><span class="ok">● built</span></div>
-</div></div>
-   </article>
-   <article class="lc-stage" data-i="4" aria-label="Open">
-    <div class="mini-ring" aria-hidden="true"><span class="" style="--a:-48deg"></span><span class="" style="--a:-24deg"></span><span class="on" style="--a:0deg"></span><span class="cap" style="--a:0deg">05 · Open</span></div>
-    <div class="lc-text">
-     <p class="lc-count">05 / 05</p>
-     <h3 class="lc-title">Open</h3>
-     <p class="lc-tag">Opens in your browser. Link in chat.</p>
-     <ul class="lc-list"><li><b>Open</b> the page in your default browser, straight away.</li><li><b>Print</b> the link, so you can reopen or share the file.</li><li><b>Prune</b> old pages with one command.</li></ul>
-     <div class="lc-actions"><a class="btn" href="https://github.com/SystemDZ/glance#install" target="_blank" rel="noopener">Install <span class="arr" aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/SystemDZ/glance" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">↗</span></a></div>
-    </div>
-    <div class="lc-mock"><div class="app" aria-hidden="true">
+</div></div></div>
+    </li>
+    <li class="stage" data-i="4">
+     <button class="stage-head" type="button" aria-expanded="false"><span class="num">05</span><span class="name">Open</span></button>
+     <div class="stage-body"><div><div class="stage-inner"><p class="tagline">Opens in your browser. Link in chat.</p><ul class="bul"><li><b>Open</b> the page in your default browser, straight away.</li><li><b>Print</b> the link, so you can reopen or share the file.</li><li><b>Prune</b> old pages with one command.</li></ul><div class="links"><a class="link" href="#install">Install <span class="arr" aria-hidden="true">→</span></a><a class="link" href="https://github.com/SystemDZ/glance" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">→</span></a></div></div></div></div>
+     <div class="sheet-wrap"><div class="sheet"><div class="app" aria-hidden="true">
  <div class="app-bar"><i></i><i></i><i></i><span>browser</span><em>opened automatically</em></div>
  <div class="app-body">
   <div class="url"><i></i>file:///Users/you/.glance/pages/20261018-domain-checklist.html</div>
@@ -192,156 +148,138 @@
   </div>
  </div>
  <div class="app-foot"><span>LINK: file:///…/domain-checklist.html</span><span class="ok">● opened</span></div>
-</div></div>
-   </article>
+</div></div></div>
+    </li>
+   </ol>
   </div>
  </div>
-</section></div>
+</section>
 
-<section class="sec" id="examples" aria-labelledby="ex-h">
- <div class="sec-head reveal"><span class="eyebrow">Examples</span><h2 class="h2" id="ex-h">Same question, different answer.</h2><p class="note">Word counts are measured from the text on this page. The answers are illustrative, not recorded model output.</p></div>
+<section class="sec" id="examples" aria-labelledby="ex-h"><div class="sec-in">
+ <div class="sec-head reveal"><div><span class="eyebrow">Examples</span><h2 class="h2" id="ex-h">Same question. A <em>different</em> answer.</h2></div><p class="note">Word counts are measured from the text on this page. The answers are illustrative, not recorded model output.</p></div>
  <div class="metrics reveal">
   <div class="metric"><b id="m-bad">&ndash;</b><span>Words in four typical answers</span></div>
   <div class="metric"><b id="m-good">&ndash;</b><span>Words in four glance answers</span></div>
   <div class="metric hi"><b id="m-ratio">&ndash;</b><span>Less to read</span></div>
  </div>
- <article class="example reveal">
-  <div class="ex-head"><span class="eyebrow">01 / A task with steps</span><h3 class="ex-q">How do I connect my domain to my new site?</h3></div>
-  <div class="vs">
-   <div class="pane typical"><div class="pane-label"><span>Typical answer</span></div><div class="card typical measure"><p>Great question! Connecting a custom domain can seem daunting at first, but with the right approach it is very manageable. First, it is important to understand that there are several ways to do this, depending on your registrar and your hosting provider. Generally speaking, you will want to log in to your domain registrar, locate the DNS settings (which may be called something different depending on the provider), and then add the appropriate records.</p><p>For the root domain you will typically add an A record pointing to your host's IP address, whereas for the www version you will usually want a CNAME record. Keep in mind that DNS changes can take anywhere from a few minutes to 48 hours to propagate, so do not panic if it does not work right away. You should also make sure not to delete any MX records if you use email on that domain, since that could break your email. Additionally, you may want to set up a redirect from www to the root domain. If you run into any issues, please do not hesitate to let me know.</p></div><ul class="notes"><li>The one dangerous instruction is buried mid-paragraph</li><li>No values to enter</li><li>Every step at once, no sense of progress</li></ul><div class="meter"></div></div>
-   <div class="pane glance"><div class="pane-label"><span>With glance</span></div><div class="card glance measure"><span class="g-tag">Step 1 of 3</span><h3 class="g-title">Open your DNS settings</h3><p>Squarespace, then Domains, then your domain, then <b>DNS Settings</b>.</p><div class="g-warn"><span>Do not touch</span><span>MX and TXT rows. Your email depends on them.</span></div><p>Reply <b>there</b> when you can see the record list.</p></div><ul class="notes"><li>One step at a time, with a clear way to continue</li><li>The risk is a labelled box, not a clause</li><li>Step 2 supplies exact values, ready to copy</li></ul><div class="meter"></div></div>
-  </div>
- </article>
- <article class="example reveal">
-  <div class="ex-head"><span class="eyebrow">02 / A decision</span><h3 class="ex-q">Which database should I use for my app?</h3></div>
-  <div class="vs">
-   <div class="pane typical"><div class="pane-label"><span>Typical answer</span></div><div class="card typical measure"><p>The right database really depends on a number of factors, including your data model, your scale requirements, your team's familiarity with the technology, and your budget. Relational databases such as PostgreSQL and MySQL are well suited to structured data and complex queries, while document databases like MongoDB offer flexibility for evolving schemas. SQLite can be an excellent choice for small applications or prototypes, though it may not be suitable for high-concurrency workloads.</p><p>It is also worth considering managed services, which can reduce operational overhead, as well as the ecosystem of tools and libraries available. Ultimately, the best choice depends on your specific needs, and I would recommend evaluating several options before making a decision.</p></div><ul class="notes"><li>Never picks one</li><li>Mentions every option, compares none</li><li>Ends by returning the work to you</li></ul><div class="meter"></div></div>
-   <div class="pane glance"><div class="pane-label"><span>With glance</span></div><div class="card glance measure"><h3 class="g-title">Use PostgreSQL.</h3><p>It handles almost any application you will build, and you will not outgrow it.</p><div class="tbl"><div class="tr h" style="grid-template-columns:1fr 1.6fr"><span>Pick</span><span>When</span></div><div class="tr" style="grid-template-columns:1fr 1.6fr"><span class="name">PostgreSQL</span><span>Default for most applications</span></div><div class="tr" style="grid-template-columns:1fr 1.6fr"><span class="name">SQLite</span><span>Prototype or single-user tool</span></div><div class="tr" style="grid-template-columns:1fr 1.6fr"><span class="name">MongoDB</span><span>Data genuinely has no fixed shape</span></div></div><p>Tell me about the application and I will confirm.</p></div><ul class="notes"><li>A verdict in the first line</li><li>A table instead of a paragraph</li><li>States what would change the answer</li></ul><div class="meter"></div></div>
-  </div>
- </article>
- <article class="example reveal">
-  <div class="ex-head"><span class="eyebrow">03 / An error</span><h3 class="ex-q">My build fails with “Module not found: ./utils/format”. Why?</h3></div>
-  <div class="vs">
-   <div class="pane typical"><div class="pane-label"><span>Typical answer</span></div><div class="card typical measure"><p>This error can have several possible causes. It could be that the file does not exist at the specified path, or that there is a typo in the import statement. It is also possible that the file extension is missing or that your module resolution settings in tsconfig.json or webpack are not configured correctly. Another potential cause is a case-sensitivity mismatch, which commonly occurs when moving between operating systems. You may also want to check that the dependency was installed correctly, that your node_modules folder is not corrupted, and that your build cache is not stale.</p><p>I would suggest going through each of these possibilities one by one. If the issue persists, feel free to share more details and I can take a closer look.</p></div><ul class="notes"><li>Six causes, none ranked</li><li>Does not say which is likely</li><li>No command to run</li></ul><div class="meter"></div></div>
-   <div class="pane glance"><div class="pane-label"><span>With glance</span></div><div class="card glance measure"><h3 class="g-title">Likely cause: letter case</h3><p>The file is <b>Format.ts</b> but the import says <b>format</b>. Linux builds are case-sensitive. Your Mac is not.</p><pre class="g-code"><span class="k">import</span> { fmt } <span class="k">from</span> "./utils/Format";</pre><details class="g-more"><summary>If that is not it</summary><div>Check the path, the tsconfig paths setting, and clear the build cache.</div></details></div><ul class="notes"><li>The most likely cause, named</li><li>The fix is one copyable line</li><li>Other causes are collapsed, not removed</li></ul><div class="meter"></div></div>
-  </div>
- </article>
- <article class="example reveal">
-  <div class="ex-head"><span class="eyebrow">04 / A plan</span><h3 class="ex-q">Help me plan the launch of my product.</h3></div>
-  <div class="vs">
-   <div class="pane typical"><div class="pane-label"><span>Typical answer</span></div><div class="card typical measure"><p>Launching a product successfully requires careful planning across a number of areas. You will want to begin by clearly defining your target audience and your value proposition, and then build a landing page that communicates this effectively. In the weeks leading up to launch, it is a good idea to build an email list, reach out to potential early adopters, and prepare your marketing materials, including social media content and a press kit. On launch day itself, you should coordinate announcements across your channels and be ready to respond to feedback quickly.</p><p>After launch, be sure to gather feedback, track your key metrics, and iterate on your product accordingly. Every product is different, so you may need to adapt this approach to your circumstances.</p></div><ul class="notes"><li>A plan with no dates and no order</li><li>No next action</li><li>Cannot be tracked or shared</li></ul><div class="meter"></div></div>
-   <div class="pane glance"><div class="pane-label"><span>With glance</span></div><div class="card glance measure"><h3 class="g-title">Four-week launch plan</h3><ul class="g-time"><li class="now"><b>Week 1. Landing page and waitlist</b><span>Next action: write the one-line promise</span></li><li><b>Week 2. Reach 20 early users</b><span>Ask people directly, not on social</span></li><li><b>Week 3. Prepare launch assets</b><span>Screenshots, a short demo, a post</span></li><li><b>Week 4. Launch and respond</b><span>Reply to every comment on day one</span></li></ul><p>Large job: glance would build this as a page you can keep open.</p></div><ul class="notes"><li>Order, timing and the next action</li><li>One line per step</li><li>Offers a page for something this size</li></ul><div class="meter"></div></div>
-  </div>
- </article>
-</section>
+  <article class="example reveal">
+   <div class="ex-head"><span class="ex-n">01</span><span class="ex-kind">A task with steps</span><h3 class="ex-q">How do I connect my domain to my new site?</h3></div>
+   <div class="vs">
+    <div class="pane typical"><span class="pane-label">Typical answer</span><div class="typical-text measure"><p>Great question! Connecting a custom domain can seem daunting at first, but with the right approach it is very manageable. First, it is important to understand that there are several ways to do this, depending on your registrar and your hosting provider. Generally speaking, you will want to log in to your domain registrar, locate the DNS settings (which may be called something different depending on the provider), and then add the appropriate records.</p><p>For the root domain you will typically add an A record pointing to your host's IP address, whereas for the www version you will usually want a CNAME record. Keep in mind that DNS changes can take anywhere from a few minutes to 48 hours to propagate, so do not panic if it does not work right away. You should also make sure not to delete any MX records if you use email on that domain, since that could break your email. Additionally, you may want to set up a redirect from www to the root domain. If you run into any issues, please do not hesitate to let me know.</p></div><ul class="notes"><li>The one dangerous instruction is buried mid-paragraph</li><li>No values to enter</li><li>Every step at once, no sense of progress</li></ul><div class="meter"></div></div>
+    <div class="pane glance"><span class="pane-label">With glance</span><div class="sheet card measure"><div class="inner"><span class="g-tag">Step 1 of 3</span><h3 class="g-title">Open your DNS settings</h3><p>Squarespace, then Domains, then your domain, then <b>DNS Settings</b>.</p><div class="g-warn"><span>Do not touch</span><span>MX and TXT rows. Your email depends on them.</span></div><p>Reply <b>there</b> when you can see the record list.</p></div></div><ul class="notes"><li>One step at a time, with a clear way to continue</li><li>The risk is a labelled box, not a clause</li><li>Step 2 supplies exact values, ready to copy</li></ul><div class="meter"></div></div>
+   </div>
+  </article>
+  <article class="example reveal">
+   <div class="ex-head"><span class="ex-n">02</span><span class="ex-kind">A decision</span><h3 class="ex-q">Which database should I use for my app?</h3></div>
+   <div class="vs">
+    <div class="pane typical"><span class="pane-label">Typical answer</span><div class="typical-text measure"><p>The right database really depends on a number of factors, including your data model, your scale requirements, your team's familiarity with the technology, and your budget. Relational databases such as PostgreSQL and MySQL are well suited to structured data and complex queries, while document databases like MongoDB offer flexibility for evolving schemas. SQLite can be an excellent choice for small applications or prototypes, though it may not be suitable for high-concurrency workloads.</p><p>It is also worth considering managed services, which can reduce operational overhead, as well as the ecosystem of tools and libraries available. Ultimately, the best choice depends on your specific needs, and I would recommend evaluating several options before making a decision.</p></div><ul class="notes"><li>Never picks one</li><li>Mentions every option, compares none</li><li>Ends by returning the work to you</li></ul><div class="meter"></div></div>
+    <div class="pane glance"><span class="pane-label">With glance</span><div class="sheet card measure"><div class="inner"><h3 class="g-title">Use PostgreSQL.</h3><p>It handles almost any application you will build, and you will not outgrow it.</p><div class="tbl"><div class="tr h" style="grid-template-columns:1fr 1.6fr"><span>Pick</span><span>When</span></div><div class="tr" style="grid-template-columns:1fr 1.6fr"><span class="name">PostgreSQL</span><span>Default for most applications</span></div><div class="tr" style="grid-template-columns:1fr 1.6fr"><span class="name">SQLite</span><span>Prototype or single-user tool</span></div><div class="tr" style="grid-template-columns:1fr 1.6fr"><span class="name">MongoDB</span><span>Data genuinely has no fixed shape</span></div></div><p>Tell me about the application and I will confirm.</p></div></div><ul class="notes"><li>A verdict in the first line</li><li>A table instead of a paragraph</li><li>States what would change the answer</li></ul><div class="meter"></div></div>
+   </div>
+  </article>
+  <article class="example reveal">
+   <div class="ex-head"><span class="ex-n">03</span><span class="ex-kind">An error</span><h3 class="ex-q">My build fails with “Module not found: ./utils/format”. Why?</h3></div>
+   <div class="vs">
+    <div class="pane typical"><span class="pane-label">Typical answer</span><div class="typical-text measure"><p>This error can have several possible causes. It could be that the file does not exist at the specified path, or that there is a typo in the import statement. It is also possible that the file extension is missing or that your module resolution settings in tsconfig.json or webpack are not configured correctly. Another potential cause is a case-sensitivity mismatch, which commonly occurs when moving between operating systems. You may also want to check that the dependency was installed correctly, that your node_modules folder is not corrupted, and that your build cache is not stale.</p><p>I would suggest going through each of these possibilities one by one. If the issue persists, feel free to share more details and I can take a closer look.</p></div><ul class="notes"><li>Six causes, none ranked</li><li>Does not say which is likely</li><li>No command to run</li></ul><div class="meter"></div></div>
+    <div class="pane glance"><span class="pane-label">With glance</span><div class="sheet card measure"><div class="inner"><h3 class="g-title">Likely cause: letter case</h3><p>The file is <b>Format.ts</b> but the import says <b>format</b>. Linux builds are case-sensitive. Your Mac is not.</p><pre class="g-code"><span class="k">import</span> { fmt } <span class="k">from</span> "./utils/Format";</pre><details class="g-more"><summary>If that is not it</summary><div>Check the path, the tsconfig paths setting, and clear the build cache.</div></details></div></div><ul class="notes"><li>The most likely cause, named</li><li>The fix is one copyable line</li><li>Other causes are collapsed, not removed</li></ul><div class="meter"></div></div>
+   </div>
+  </article>
+  <article class="example reveal">
+   <div class="ex-head"><span class="ex-n">04</span><span class="ex-kind">A plan</span><h3 class="ex-q">Help me plan the launch of my product.</h3></div>
+   <div class="vs">
+    <div class="pane typical"><span class="pane-label">Typical answer</span><div class="typical-text measure"><p>Launching a product successfully requires careful planning across a number of areas. You will want to begin by clearly defining your target audience and your value proposition, and then build a landing page that communicates this effectively. In the weeks leading up to launch, it is a good idea to build an email list, reach out to potential early adopters, and prepare your marketing materials, including social media content and a press kit. On launch day itself, you should coordinate announcements across your channels and be ready to respond to feedback quickly.</p><p>After launch, be sure to gather feedback, track your key metrics, and iterate on your product accordingly. Every product is different, so you may need to adapt this approach to your circumstances.</p></div><ul class="notes"><li>A plan with no dates and no order</li><li>No next action</li><li>Cannot be tracked or shared</li></ul><div class="meter"></div></div>
+    <div class="pane glance"><span class="pane-label">With glance</span><div class="sheet card measure"><div class="inner"><h3 class="g-title">Four-week launch plan</h3><ul class="g-time"><li class="now"><b>Week 1. Landing page and waitlist</b><span>Next action: write the one-line promise</span></li><li><b>Week 2. Reach 20 early users</b><span>Ask people directly, not on social</span></li><li><b>Week 3. Prepare launch assets</b><span>Screenshots, a short demo, a post</span></li><li><b>Week 4. Launch and respond</b><span>Reply to every comment on day one</span></li></ul><p>Large job: glance would build this as a page you can keep open.</p></div></div><ul class="notes"><li>Order, timing and the next action</li><li>One line per step</li><li>Offers a page for something this size</li></ul><div class="meter"></div></div>
+   </div>
+  </article>
+</div></section>
 
-<section class="sec" id="install" aria-labelledby="in-h">
- <div class="sec-head reveal"><span class="eyebrow">Install</span><h2 class="h2" id="in-h">Two commands.</h2><p class="note">Python 3 required. No packages, no network.</p></div>
+<section class="sec" id="install" aria-labelledby="in-h"><div class="sec-in">
+ <div class="sec-head reveal"><div><span class="eyebrow">Install</span><h2 class="h2" id="in-h">Two commands.</h2></div><p class="note">Python 3 required. No packages, no network.</p></div>
  <div class="inst reveal">
-  <div class="inst-card main"><h3>Claude Code</h3><p>Add the marketplace, then install the plugin.</p>
+  <div><h3>Claude Code</h3><p>Add the marketplace, then install the plugin.</p>
    <div class="cmd"><pre>/plugin marketplace add SystemDZ/glance</pre><button class="copy" type="button" data-copy="/plugin marketplace add SystemDZ/glance">Copy</button></div>
    <div class="cmd"><pre>/plugin install glance@glance</pre><button class="copy" type="button" data-copy="/plugin install glance@glance">Copy</button></div></div>
-  <div class="inst-card"><h3>Manual</h3><p>Copy the skill folder into your skills directory.</p>
+  <div><h3>Manual</h3><p>Copy the skill folder into your skills directory.</p>
    <div class="cmd"><pre>git clone https://github.com/SystemDZ/glance</pre><button class="copy" type="button" data-copy="git clone https://github.com/SystemDZ/glance">Copy</button></div>
    <div class="cmd"><pre>cp -R glance/skills/glance ~/.claude/skills/</pre><button class="copy" type="button" data-copy="cp -R glance/skills/glance ~/.claude/skills/">Copy</button></div></div>
-  <div class="inst-card"><h3>Other agents</h3><p>Any agent that reads SKILL.md skills can use the same folder. Copy <b style="color:var(--text);font-weight:500">skills/glance</b> into its skills directory, then say <b style="color:var(--text);font-weight:500">/glance</b>.</p>
-   <a class="btn" href="https://github.com/SystemDZ/glance" target="_blank" rel="noopener" style="justify-self:start">Open on GitHub <span class="arr" aria-hidden="true">&#8599;</span></a></div>
+  <div><h3>Other agents</h3><p>Any agent that reads SKILL.md skills can use the same folder. Copy <b style="color:var(--text);font-weight:500">skills/glance</b> into its skills directory, then say <b style="color:var(--text);font-weight:500">/glance</b>.</p>
+   <a class="link" href="https://github.com/SystemDZ/glance" target="_blank" rel="noopener" style="justify-self:start">Open on GitHub <span class="arr" aria-hidden="true">→</span></a></div>
  </div>
-</section>
+</div></section>
 </main>
 
-<footer class="foot"><div class="foot-in"><span>glance &middot; MIT licence &middot; 2026</span><nav aria-label="Footer"><a href="https://github.com/SystemDZ/glance" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/SystemDZ/glance/blob/main/LICENSE" target="_blank" rel="noopener">Licence</a></nav></div></footer>
+<footer class="sec" style="border-bottom:0"><div class="foot-in"><span>glance &middot; MIT licence &middot; 2026</span><nav aria-label="Footer"><a href="https://github.com/SystemDZ/glance" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/SystemDZ/glance/blob/main/LICENSE" target="_blank" rel="noopener">Licence</a></nav></div></footer>
 
 <script>
-
 (function () {
-  var lc = document.getElementById("lifecycle");
-  var ring = lc.querySelector(".lc-ring");
-  var ticks = document.getElementById("ticks");
-  var stages = [].slice.call(lc.querySelectorAll(".lc-stage"));
-  var pills = [].slice.call(lc.querySelectorAll(".pill"));
-  var N = stages.length, DELTA = 24 * Math.PI / 180;
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var wide = matchMedia("(min-width: 901px)");
-  var cur = 0, target = 0, active = -1, g = { R: 520, cx: 0, cy: 0 }, raf = 0;
 
-  function measure() {
-    if (!wide.matches) return;
-    var r = ring.getBoundingClientRect();
-    var nodeX = r.width - 30;
-    var R = Math.max(300, Math.min(r.width * 1.12, 640));
-    g = { R: R, cx: nodeX - R, cy: r.height / 2, nodeX: nodeX };
-    ring.style.setProperty("--R", R + "px");
-    ring.style.setProperty("--cx", g.cx + "px");
-    ring.style.setProperty("--cy", g.cy + "px");
-    var text = stages[0].querySelector(".lc-text").getBoundingClientRect();
-    var textX = text.left - r.left;
-    ring.style.setProperty("--link-x", nodeX + 34 + "px");
-    ring.style.setProperty("--link-w", Math.max(12, textX - nodeX - 34 - 10) + "px");
-    // line each stage's tagline up with the node's horizontal connector
-    stages.forEach(function (s) {
-      var t = s.querySelector(".lc-text"), tag = s.querySelector(".lc-tag");
-      t.style.transform = "none";
-      var tr = t.getBoundingClientRect(), gr = tag.getBoundingClientRect();
-      var tagCenter = gr.top + gr.height / 2 - tr.top;
-      var natural = (r.height - tr.height) / 2;
-      t.style.transform = "translateY(" + Math.round(g.cy - tagCenter - natural) + "px)";
-    });
-  }
-  function readTarget() {
-    if (!wide.matches) return 0;
-    var rect = lc.getBoundingClientRect();
-    var total = lc.offsetHeight - innerHeight;
-    var y = Math.min(Math.max(-rect.top, 0), Math.max(total, 1));
-    return (y / Math.max(total, 1)) * (N - 1);
-  }
-  function render() {
-    if (!wide.matches) return;
-    pills.forEach(function (pl, i) {
-      var th = (i - cur) * DELTA, a = Math.abs(th);
-      var x = g.cx + g.R * Math.cos(th), y = g.cy + g.R * Math.sin(th);
-      var o = Math.max(0, Math.min(1, (1.35 - a) / 0.35));
-      pl.style.transform = "translate(" + x + "px," + y + "px) translate(-50%,-50%)";
-      pl.style.opacity = o;
-      pl.style.pointerEvents = o < 0.2 ? "none" : "auto";
-      var on = Math.abs(i - cur) < 0.5;
-      pl.classList.toggle("is-active", on);
-      if (on) pl.setAttribute("aria-current", "step"); else pl.removeAttribute("aria-current");
-    });
-    ticks.style.transform = "rotate(" + (-cur * 24) + "deg)";
-    var idx = Math.min(N - 1, Math.max(0, Math.round(cur)));
-    if (idx !== active) {
-      active = idx;
-      stages.forEach(function (s, i) { s.classList.toggle("is-active", i === idx); });
+  /* ---- the scan: a beam passes down a wall of text and keeps three lines ---- */
+  (function () {
+    var body = document.querySelector(".scan-body"); if (!body) return;
+    var beam = document.getElementById("beam");
+    var lines = [].slice.call(body.querySelectorAll(".ln"));
+    function isGap(l) { return l.classList.contains("gap"); }
+    function final() {
+      lines.forEach(function (l) { if (isGap(l)) return; l.classList.add(l.classList.contains("key") ? "hit" : "done"); });
+      beam.classList.remove("on");
     }
-  }
-  function tick() {
-    var d = target - cur;
-    cur = reduce || Math.abs(d) < 0.0008 ? target : cur + d * 0.14;
-    render();
-    raf = Math.abs(target - cur) > 0.0008 ? requestAnimationFrame(tick) : 0;
-  }
-  function kick() { target = readTarget(); if (!raf) raf = requestAnimationFrame(tick); }
-  pills.forEach(function (pl) {
-    pl.addEventListener("click", function () {
-      var i = +pl.dataset.i, total = lc.offsetHeight - innerHeight;
-      scrollTo({ top: lc.offsetTop + (i / (N - 1)) * total, behavior: reduce ? "auto" : "smooth" });
-    });
-  });
-  addEventListener("scroll", kick, { passive: true });
-  addEventListener("resize", function () { measure(); kick(); });
-  wide.addEventListener("change", function () { measure(); kick(); });
-  measure(); target = readTarget(); cur = target; render();
-})();
+    if (reduce) { final(); return; }
+    var i = 0, timer = 0;
+    function reset() { lines.forEach(function (l) { l.classList.remove("hit", "done"); }); beam.classList.remove("on"); beam.style.transform = "translateY(0)"; i = 0; }
+    function step() {
+      if (i >= lines.length) {
+        beam.classList.remove("on");
+        timer = setTimeout(function () { reset(); timer = setTimeout(step, 1000); }, 3600);
+        return;
+      }
+      var l = lines[i];
+      beam.classList.add("on");
+      beam.style.transform = "translateY(" + (l.offsetTop + l.offsetHeight / 2) + "px)";
+      if (!isGap(l)) l.classList.add(l.classList.contains("key") ? "hit" : "done");
+      i++;
+      timer = setTimeout(step, isGap(l) ? 70 : 190);
+    }
+    timer = setTimeout(step, 1100);
+  })();
 
-(function () {
-  /* dropdown */
-  var dd = document.getElementById("dd"), btn = dd.querySelector("button");
-  function setOpen(v) { dd.dataset.open = v; btn.setAttribute("aria-expanded", v); }
-  btn.addEventListener("click", function (e) { e.stopPropagation(); setOpen(dd.dataset.open !== "true"); });
-  document.addEventListener("click", function () { setOpen(false); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
-  /* copy buttons */
+  /* ---- process: scroll position chooses the stage ---- */
+  (function () {
+    var proc = document.getElementById("process"); if (!proc) return;
+    var stages = [].slice.call(proc.querySelectorAll(".stage"));
+    var prog = proc.querySelector(".prog i");
+    var N = stages.length, HEADER = 64, active = -1;
+    var wide = matchMedia("(min-width: 961px)");
+    function setActive(idx) {
+      if (idx === active) return; active = idx;
+      stages.forEach(function (s, i) {
+        s.classList.toggle("is-active", i === idx);
+        s.classList.toggle("is-past", i < idx);
+        s.querySelector(".stage-head").setAttribute("aria-expanded", i === idx ? "true" : "false");
+      });
+    }
+    function total() { return Math.max(1, proc.offsetHeight - (innerHeight - HEADER)); }
+    function update() {
+      if (!wide.matches) return;
+      var y = Math.min(Math.max(-(proc.getBoundingClientRect().top - HEADER), 0), total());
+      var p = (y / total()) * (N - 1);
+      prog.style.setProperty("--p", p / (N - 1));
+      prog.parentNode.style.setProperty("--p", p / (N - 1));
+      setActive(Math.min(N - 1, Math.max(0, Math.round(p))));
+    }
+    stages.forEach(function (s, i) {
+      s.querySelector(".stage-head").addEventListener("click", function () {
+        if (!wide.matches) return;
+        var top = scrollY + proc.getBoundingClientRect().top - HEADER + (i / (N - 1)) * total() + 2;
+        scrollTo({ top: top, behavior: reduce ? "auto" : "smooth" });
+      });
+    });
+    addEventListener("scroll", update, { passive: true });
+    addEventListener("resize", update);
+    wide.addEventListener("change", update);
+    update();
+  })();
+
+  /* ---- copy buttons ---- */
   document.querySelectorAll("[data-copy]").forEach(function (b) {
     b.addEventListener("click", function () {
       var t = b.getAttribute("data-copy"), label = b.textContent;
@@ -350,7 +288,8 @@
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, fb); else fb();
     });
   });
-  /* live word counts */
+
+  /* ---- live word counts, measured from the page text ---- */
   var tb = 0, tg = 0;
   document.querySelectorAll(".pane").forEach(function (pane) {
     var m = pane.querySelector(".measure"), meter = pane.querySelector(".meter"); if (!m || !meter) return;
@@ -358,15 +297,17 @@
     if (pane.classList.contains("typical")) tb += w; else tg += w;
     meter.innerHTML = "<span><b>" + w + "</b> words</span><span>about <b>" + s + "</b> sec to read</span>";
   });
-  function set(id, v) { document.getElementById(id).textContent = v; }
-  set("m-bad", tb); set("m-good", tg); set("m-ratio", (Math.round(tb / Math.max(tg, 1) * 10) / 10) + "\u00d7");
-  /* reveal on scroll */
+  function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+  set("m-bad", tb); set("m-good", tg); set("m-ratio", (Math.round(tb / Math.max(tg, 1) * 10) / 10) + "×");
+
+  /* ---- reveal on scroll ---- */
   var els = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  if ("IntersectionObserver" in window && !reduce) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.1 });
     els.forEach(function (el) { io.observe(el); });
   } else { els.forEach(function (el) { el.classList.add("in"); }); }
 })();
+
 </script>
 </body>
 </html>
