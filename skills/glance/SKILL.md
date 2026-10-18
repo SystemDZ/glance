@@ -1,16 +1,16 @@
 ---
-name: scannable
-description: Stop walls of text. Quizzes the user once about how they like answers (chat length, formats, one step at a time or all at once, when a visual page beats text, theme, auto-open), saves the answers, then applies them to every reply. For complex answers (many steps, comparisons, plans, many values to copy) it builds a clean self-contained HTML page, opens it in the browser and shows the link. Use when the user says answers are too long, confusing or hard to read, asks for something visual, a checklist or a page, wants to set or change how answers look, or types /scannable. Works with any agent that supports SKILL.md skills.
+name: glance
+description: Stop walls of text. Quizzes the user once about how they like answers (chat length, formats, one step at a time or all at once, when a visual page beats text, theme, auto-open), saves the answers, then applies them to every reply. For complex answers (many steps, comparisons, plans, many values to copy) it builds a clean self-contained HTML page, opens it in the browser and shows the link. Use when the user says answers are too long, confusing or hard to read, asks for something visual, a checklist or a page, wants to set or change how answers look, or types /glance. Works with any agent that supports SKILL.md skills.
 license: MIT
 metadata:
   version: "1.0.0"
 ---
 
-# Scannable
+# Glance
 
 Make answers fast to read. Learn how this user likes to receive information, remember it, and switch between a short text reply and a visual page at the right moment.
 
-`SCRIPT` below means `scripts/scannable.py` inside this skill's folder. Run it with `python3` (use `py` on Windows). It needs only the Python standard library. If Python is missing, see "No Python" at the end.
+`SCRIPT` below means `scripts/glance.py` inside this skill's folder. Run it with `python3` (use `py` on Windows). It needs only the Python standard library. If Python is missing, see "No Python" at the end.
 
 ## 1. Always on: five rules
 
@@ -28,7 +28,7 @@ Run `python3 SCRIPT prefs get`.
 
 - It prints a JSON object with `chat`, `visual` and `delivery` keys: **apply it silently** and go to section 3. Do not mention the skill.
 - It prints `{}`: no preferences yet. Run the quiz (below), unless the user clearly declined.
-- The user says "change how you answer", "reset", or "/scannable": run the quiz again, showing the current values as the defaults.
+- The user says "change how you answer", "reset", or "/glance": run the quiz again, showing the current values as the defaults.
 
 ### How to run the quiz
 
@@ -87,7 +87,7 @@ Follow `chat` in the preferences.
    - Write in the user's language and level.
 4. **Build and open:** `python3 SCRIPT show --title "Short name" --body body.html`.
    - If `delivery.auto_open` is `ask`, build with `--no-open`, show the link, and run `open PAGE` only if the user says yes.
-   - It writes the page to `~/.scannable/pages/`, opens it in the default browser (unless `delivery.auto_open` is `no`) and prints `LINK:`, `PATH:` and `OPENED:` lines.
+   - It writes the page to `~/.glance/pages/`, opens it in the default browser (unless `delivery.auto_open` is `no`) and prints `LINK:`, `PATH:` and `OPENED:` lines.
    - **Always show the `LINK:` value to the user**, even when it opened. If `OPENED: no`, say why (for example a headless or SSH session) and give the link.
 5. **Update, don't pile up:** if you are revising a page you already made this session, build again with the same title. Old pages are cleaned by `python3 SCRIPT prune`.
 
@@ -117,4 +117,4 @@ Flags: `--no-open` never opens the browser, `--json` prints machine-readable out
 
 ## No Python
 
-If Python is unavailable, write one complete HTML file yourself: copy `assets/template.html`, paste `assets/base.css` and `assets/base.js` where `{{CSS}}` and `{{JS}}` are, put your body at `{{BODY}}`, save it under `~/.scannable/pages/`, then open it with `open` (macOS), `xdg-open` (Linux) or `start ""` (Windows) and show the `file://` link. Read and write `~/.scannable/preferences.json` directly.
+If Python is unavailable, write one complete HTML file yourself: copy `assets/template.html`, paste `assets/base.css` and `assets/base.js` where `{{CSS}}` and `{{JS}}` are, put your body at `{{BODY}}`, save it under `~/.glance/pages/`, then open it with `open` (macOS), `xdg-open` (Linux) or `start ""` (Windows) and show the `file://` link. Read and write `~/.glance/preferences.json` directly.

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""scannable helper: build, open and manage visual answer pages, and store the user's answer-style preferences.
+"""glance helper: build, open and manage visual answer pages, and store the user's answer-style preferences.
 
 Standard library only. Works on macOS, Linux, Windows and WSL.
 
-  scannable.py prefs get|set|reset|path     read or change saved preferences
-  scannable.py build  --title T --body FILE write a finished page (does not open it)
-  scannable.py show   --title T --body FILE build + open in the browser + print the link
-  scannable.py open   PAGE.html             open an existing page and print the link
-  scannable.py demo   kitchen-sink|styles   open a built-in demo page
-  scannable.py prune  [--days 30]           delete old pages
+  glance.py prefs get|set|reset|path     read or change saved preferences
+  glance.py build  --title T --body FILE write a finished page (does not open it)
+  glance.py show   --title T --body FILE build + open in the browser + print the link
+  glance.py open   PAGE.html             open an existing page and print the link
+  glance.py demo   kitchen-sink|styles   open a built-in demo page
+  glance.py prune  [--days 30]           delete old pages
 
-Everything lives in ~/.scannable (override with the SCANNABLE_HOME environment variable).
+Everything lives in ~/.glance (override with the GLANCE_HOME environment variable).
 """
 import argparse
 import datetime as dt
@@ -25,7 +25,7 @@ import sys
 import webbrowser
 from pathlib import Path
 
-HOME = Path(os.environ.get("SCANNABLE_HOME") or (Path.home() / ".scannable"))
+HOME = Path(os.environ.get("GLANCE_HOME") or (Path.home() / ".glance"))
 PAGES = HOME / "pages"
 PREFS = HOME / "preferences.json"
 SKILL = Path(__file__).resolve().parent.parent
@@ -201,7 +201,7 @@ def cmd_prune(args):
 
 
 def main():
-    parser = argparse.ArgumentParser(prog="scannable", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser = argparse.ArgumentParser(prog="glance", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("prefs")

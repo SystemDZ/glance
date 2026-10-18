@@ -1,11 +1,13 @@
-# scannable
+# glance
 
 **AI answers you can actually read.**
 
-Most AI replies are walls of text. `scannable` is an [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) that fixes that in two moves:
+Most AI replies are walls of text. `glance` is an [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) that fixes that in two moves:
 
 1. **It asks you once** how you like answers: how long, which formats, one step at a time or all at once, when a visual page beats text, light or dark. It saves your answers.
 2. **It then adapts every reply.** Quick things stay short, structured text. Complex things (4+ steps, comparisons, plans, lots of values to copy) become a clean visual page that **opens in your browser**, with the link shown in chat.
+
+**Live demo:** https://systemdz.github.io/glance/ (four bad AI answers next to the same answers done well)
 
 ## What a page looks like
 
@@ -15,46 +17,46 @@ Most AI replies are walls of text. `scannable` is an [Agent Skill](https://docs.
 - Copy buttons on every value, a "do not touch" box for risky things, an undo plan, and a collapsed "details" section.
 - Light and dark theme, phone friendly, fully offline (no fonts, scripts or images from the web).
 
-Try the gallery after installing: `python3 <skill-folder>/scripts/scannable.py demo kitchen-sink`
+Try the gallery after installing: `python3 <skill-folder>/scripts/glance.py demo kitchen-sink`
 
 ## Install
 
 ### Claude Code (plugin)
 
 ```text
-/plugin marketplace add SystemDZ/scannable
-/plugin install scannable@scannable
+/plugin marketplace add SystemDZ/glance
+/plugin install glance@glance
 ```
 
 ### Claude Code (manual)
 
 ```bash
-cp -R skills/scannable ~/.claude/skills/scannable
+cp -R skills/glance ~/.claude/skills/glance
 ```
 
 ### Other agents
 
-Any agent that reads `SKILL.md` skills: copy the `skills/scannable` folder into that agent's skills directory. For an agent without skill support, paste `skills/scannable/SKILL.md` into its instructions and keep the folder somewhere it can run `scripts/scannable.py`.
+Any agent that reads `SKILL.md` skills: copy the `skills/glance` folder into that agent's skills directory. For an agent without skill support, paste `skills/glance/SKILL.md` into its instructions and keep the folder somewhere it can run `scripts/glance.py`.
 
 Requirements: Python 3 (standard library only). No packages, no network.
 
 ## Use it
 
-Say `/scannable`, or just complain: "your answers are too long", "make this visual", "give me a checklist".
+Say `/glance`, or just complain: "your answers are too long", "make this visual", "give me a checklist".
 
 | You say | It does |
 |---|---|
-| `/scannable` | Runs the quiz (Quick: 4 questions, or Full: 9) |
+| `/glance` | Runs the quiz (Quick: 4 questions, or Full: 9) |
 | "change how you answer" | Re-runs the quiz with your current choices as defaults |
 | "show me a page for this" | Builds a page, opens it, shows the link |
-| "reset scannable" | Deletes your saved preferences |
+| "reset glance" | Deletes your saved preferences |
 
 ## What it stores
 
-Everything is in `~/.scannable/` (override with `SCANNABLE_HOME`):
+Everything is in `~/.glance/` (override with `GLANCE_HOME`):
 
 - `preferences.json`: your answers.
-- `pages/`: the pages it built. `scannable.py prune --days 30` cleans old ones.
+- `pages/`: the pages it built. `glance.py prune --days 30` cleans old ones.
 
 Pages are plain local files. The skill is told never to put secrets on them. Nothing is uploaded anywhere. Publishing a page online only happens if you ask.
 
@@ -72,9 +74,9 @@ Yes/no answers, one-liners, quick fixes and urgent errors always stay as short t
 ## Layout
 
 ```text
-skills/scannable/
+skills/glance/
   SKILL.md                 instructions the agent follows
-  scripts/scannable.py     build, open, preferences (stdlib only)
+  scripts/glance.py     build, open, preferences (stdlib only)
   assets/                  template, design system CSS/JS, demo pages
   references/              quiz wording, component snippets
 ```

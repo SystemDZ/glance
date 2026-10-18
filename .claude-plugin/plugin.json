@@ -1,5 +1,5 @@
 {
-  "name": "scannable",
+  "name": "glance",
   "version": "1.0.0",
   "description": "Stop walls of text. Learns how you like answers, then replies in short structured text or a clean visual page that opens in your browser."
 }

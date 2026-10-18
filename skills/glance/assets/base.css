@@ -1,4 +1,4 @@
-/* scannable design system. One column, four semantic colors, strong hierarchy. No external resources. */
+/* glance design system. One column, four semantic colors, strong hierarchy. No external resources. */
 :root {
   --bg: #f4f6f9; --surface: #ffffff; --ink: #0d1520; --muted: #566375; --line: #dde3ea;
   --now: #1b57ee; --now-bg: #e6edff;
@@ -139,7 +139,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
 /* ---- code + details ---- */
 .code { position: relative; }
-.code pre { margin: 0; padding: 16px 16px 16px 16px; border-radius: 10px; background: #0f1722; color: #e6edf5; font: 500 14px/1.6 var(--mono); overflow-x: auto; }
+.code pre { margin: 0; padding: 16px 92px 16px 16px; border-radius: 10px; background: #0f1722; color: #e6edf5; font: 500 14px/1.6 var(--mono); overflow-x: auto; }
 .code .copy { position: absolute; top: 8px; right: 8px; min-height: 34px; padding: 0 12px; font-size: 12px; background: #0f1722; }
 details.more { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 details.more summary { cursor: pointer; padding: 14px 16px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; }

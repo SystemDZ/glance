@@ -18,7 +18,7 @@
   var store = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
   var boxes = document.querySelectorAll("input[data-persist]");
   boxes.forEach(function (box) {
-    var key = "scannable:" + location.pathname + ":" + box.getAttribute("data-persist");
+    var key = "glance:" + location.pathname + ":" + box.getAttribute("data-persist");
     if (store.get(key) === "1") box.checked = true;
     box.addEventListener("change", function () { store.set(key, box.checked ? "1" : "0"); update(); });
   });

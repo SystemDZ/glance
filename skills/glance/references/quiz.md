@@ -100,12 +100,12 @@ Say "Tell me to change this any time", then answer their last question in the ne
 Show it, then append only after a clear yes:
 
 ```markdown
-## Answer style (scannable)
+## Answer style (glance)
 - Lead with the answer or next action. No preamble, no recap.
 - Chat replies: short (about 6 lines), bullets and tables, values in code blocks.
 - When I must act, give one step at a time and wait for "done".
 - Use 🟢 do · 🔴 don't touch · 🟡 careful · 🔵 now.
-- For complex answers (4+ steps, comparisons, plans, many values) build a visual page with the scannable skill, open it in my browser, and show the link.
+- For complex answers (4+ steps, comparisons, plans, many values) build a visual page with the glance skill, open it in my browser, and show the link.
 ```
 
 Adjust each line to the saved preferences.
