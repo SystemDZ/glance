@@ -64,7 +64,7 @@ Follow `chat` in the preferences.
 
 - **length:** `one_line` = 1 line. `short` = up to 6 lines. `medium` = up to 15. `detailed` = no cap, still structured.
 - **steps:** `one_at_a_time` = send only the current step, then wait. `few` = 2 to 3. `all` = everything.
-- **markers:** if `emoji`, use a consistent legend: 🟢 do or safe, 🔴 stop or do not touch, 🟡 careful or later, 🔵 now or info. Use bold labels instead if `bold`, nothing if `plain`.
+- **markers:** `bold` (default) = bold labels such as **Do**, **Stop**, **Note**. `plain` = no labels. `emoji` = coloured emoji markers, only if the user explicitly chose them.
 - **format:** use only the formats the user picked. Tables for values and comparisons. If the host cannot render markdown tables, use aligned lists.
 - **level:** `plain` = no jargon, say what each thing is for. `technical` = assume expertise.
 - Ask **at most one question** per reply.

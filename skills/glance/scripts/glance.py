@@ -34,7 +34,7 @@ ASSETS = SKILL / "assets"
 DEFAULTS = {
     "version": 1,
     "chat": {"length": "short", "format": ["bullets", "tables", "code"], "steps": "one_at_a_time",
-             "markers": "emoji", "level": "plain"},
+             "markers": "bold", "level": "plain"},
     "visual": {"trigger": "complex", "theme": "auto", "density": "airy"},
     "delivery": {"auto_open": "yes", "persist_in_instructions": "no"},
 }

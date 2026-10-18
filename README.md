@@ -7,13 +7,13 @@ Most AI replies are walls of text. `glance` is an [Agent Skill](https://docs.cla
 1. **It asks you once** how you like answers: how long, which formats, one step at a time or all at once, when a visual page beats text, light or dark. It saves your answers.
 2. **It then adapts every reply.** Quick things stay short, structured text. Complex things (4+ steps, comparisons, plans, lots of values to copy) become a clean visual page that **opens in your browser**, with the link shown in chat.
 
-**Live demo:** https://systemdz.github.io/glance/ (four bad AI answers next to the same answers done well)
+**Live demo:** https://systemdz.github.io/glance/ (the process, and four typical AI answers next to the same answers done well)
 
 ## What a page looks like
 
 - Verdict first, in one sentence.
 - One loud card: the step you are on. Finished steps shrink, upcoming ones go grey.
-- Color means something: 🔵 now or info, 🟢 done or safe, 🔴 stop, 🟡 careful or later.
+- Color carries meaning: blue for the current step or information, green for done or safe, red for stop, amber for careful or later.
 - Copy buttons on every value, a "do not touch" box for risky things, an undo plan, and a collapsed "details" section.
 - Light and dark theme, phone friendly, fully offline (no fonts, scripts or images from the web).
 
@@ -74,6 +74,7 @@ Yes/no answers, one-liners, quick fixes and urgent errors always stay as short t
 ## Layout
 
 ```text
+docs/                      the demo site (GitHub Pages)
 skills/glance/
   SKILL.md                 instructions the agent follows
   scripts/glance.py     build, open, preferences (stdlib only)

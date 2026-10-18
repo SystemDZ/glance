@@ -32,12 +32,12 @@ If the host has a structured-question tool, use it. Otherwise send one message l
 
 → `chat.steps`: `one_at_a_time` | `few` | `all`
 
-**Q4. Color markers in chat?**
-- a) Colored emoji: 🟢 do · 🔴 don't touch · 🟡 careful · 🔵 now **(recommended)**
-- b) Bold labels only
-- c) Plain text
+**Q4. How should I mark warnings and steps in chat?**
+- a) Bold labels such as **Do**, **Stop**, **Note** **(recommended)**
+- b) Plain text, no labels
+- c) Coloured emoji, only if you like them
 
-→ `chat.markers`: `emoji` | `bold` | `plain`
+→ `chat.markers`: `bold` | `plain` | `emoji`
 
 ## Round 2: visual pages
 
@@ -79,7 +79,7 @@ If the host has a structured-question tool, use it. Otherwise send one message l
 ## Saving
 
 ```bash
-python3 SCRIPT prefs set --json '{"chat":{"length":"short","format":["bullets","tables","code"],"steps":"one_at_a_time","markers":"emoji","level":"plain"},"visual":{"trigger":"complex","theme":"auto","density":"airy"},"delivery":{"auto_open":"yes"}}'
+python3 SCRIPT prefs set --json '{"chat":{"length":"short","format":["bullets","tables","code"],"steps":"one_at_a_time","markers":"bold","level":"plain"},"visual":{"trigger":"complex","theme":"auto","density":"airy"},"delivery":{"auto_open":"yes"}}'
 ```
 
 ## Confirmation table to show after saving
@@ -88,7 +88,7 @@ python3 SCRIPT prefs set --json '{"chat":{"length":"short","format":["bullets","
 |---|---|
 | Chat answers | short, bullets + tables + code |
 | Steps | one at a time |
-| Markers | 🟢 🔴 🟡 🔵 |
+| Markers | bold labels |
 | Visual page | only for complex things |
 | Look | match system, airy |
 | After building | open in browser |
@@ -104,7 +104,7 @@ Show it, then append only after a clear yes:
 - Lead with the answer or next action. No preamble, no recap.
 - Chat replies: short (about 6 lines), bullets and tables, values in code blocks.
 - When I must act, give one step at a time and wait for "done".
-- Use 🟢 do · 🔴 don't touch · 🟡 careful · 🔵 now.
+- Mark warnings with bold labels: **Do**, **Stop**, **Note**.
 - For complex answers (4+ steps, comparisons, plans, many values) build a visual page with the glance skill, open it in my browser, and show the link.
 ```
 
