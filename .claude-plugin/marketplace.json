@@ -1,0 +1,11 @@
+{
+  "name": "scannable",
+  "owner": { "name": "Mohammed Fellak" },
+  "plugins": [
+    {
+      "name": "scannable",
+      "source": "./",
+      "description": "Quiz-driven answer style for AI agents: short structured chat, plus clean visual pages for complex answers."
+    }
+  ]
+}

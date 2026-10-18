@@ -1,0 +1,83 @@
+<header class="hero">
+  <div class="eyebrow">Component gallery · every block you can use</div>
+  <h1>One design system, built for scanning</h1>
+  <p class="lede">Copy any block below into a page body. Keep the first screen to the answer and one action.</p>
+</header>
+
+<div class="answer"><small>Short answer</small>Lead with the verdict in one sentence, then let the reader choose how deep to go.</div>
+
+<section class="progress" data-total="5" data-done="3" aria-label="Progress">
+  <div class="segs"></div>
+  <div class="progress-label"></div>
+</section>
+
+<section class="section">
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li class="step done"><div class="badge" aria-hidden="true">✓</div><div><span class="tag t-done">Done</span><h3>Finished steps stay small and quiet</h3></div></li>
+    <li class="step now">
+      <div class="badge" aria-hidden="true">4</div>
+      <div>
+        <span class="tag t-now">Do this now</span>
+        <h3>Only one step is loud at a time</h3>
+        <p>Say exactly where to click, then show the values to enter.</p>
+        <div class="copyrows" style="margin-top:16px">
+          <div class="copyrow"><div><small>Name</small><b>example.com</b></div><button class="copy" type="button" data-copy="example.com">Copy</button></div>
+          <div class="copyrow"><div><small>Value</small><b>203.0.113.10</b></div><button class="copy" type="button" data-copy="203.0.113.10">Copy</button></div>
+        </div>
+        <label class="check" style="margin-top:16px"><input type="checkbox" data-persist="gallery-step-4"> I did this</label>
+      </div>
+    </li>
+    <li class="step"><div class="badge" aria-hidden="true">5</div><div><span class="tag t-mute">Then</span><h3>Upcoming steps stay grey</h3><p>One sentence on what happens next.</p></div></li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>Callouts</h2>
+  <div class="callout stop"><span class="tag t-stop">Hands off</span><h3>Things that must not be touched</h3><ul class="chips"><li>MX records</li><li>SPF</li></ul></div>
+  <div class="callout warn"><span class="tag t-warn">Careful</span><h3>Something that can be undone, and how</h3><p>Name the undo step so the risk feels small.</p></div>
+  <div class="callout ok"><span class="tag t-done">Safe</span><h3>Something that is safe, and why</h3><p>Reassure with the reason, not just the word.</p></div>
+  <div class="callout info"><span class="tag t-now">Good to know</span><h3>Context the reader may want</h3><p>Keep it to two lines.</p></div>
+</section>
+
+<section class="section">
+  <h2>Compare options</h2>
+  <div class="compare">
+    <div class="option rec"><span class="tag t-done">Recommended</span><h3>Option A</h3><ul><li>Fastest to set up</li><li>Free</li></ul></div>
+    <div class="option"><span class="tag t-mute">Alternative</span><h3>Option B</h3><ul><li>More control</li><li>Takes longer</li></ul></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Table</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Item</th><th>Status</th><th class="num">Cost</th></tr></thead>
+    <tbody>
+      <tr><td>Hosting</td><td><span class="chip done">Live</span></td><td class="num">$0</td></tr>
+      <tr><td>Domain</td><td><span class="chip warn">Pending</span></td><td class="num">$12</td></tr>
+      <tr><td>Email</td><td><span class="chip stop">At risk</span></td><td class="num">$8</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section">
+  <h2>Facts and timeline</h2>
+  <dl class="kv"><dt>Owner</dt><dd>You</dd><dt>Status</dt><dd>Live</dd><dt>Link</dt><dd>example.com</dd></dl>
+  <ul class="timeline">
+    <li class="done"><b>Planned</b><span>Monday</span></li>
+    <li class="now"><b>Building</b><span>This week</span></li>
+    <li><b>Launch</b><span>Friday</span></li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Code and extra detail</h2>
+  <div class="code"><pre>npm run build &amp;&amp; npm run deploy</pre><button class="copy" type="button" data-copy="npm run build &amp;&amp; npm run deploy">Copy</button></div>
+  <details class="more"><summary>Details, if you want them</summary><div><p>Long explanations, caveats and background live here, collapsed by default.</p></div></details>
+</section>
+
+<section class="later">
+  <span class="tag t-warn" style="justify-self:start">Later, not today</span>
+  <h2>Things that wait their turn</h2>
+  <ol><li><b>First</b> thing to do afterwards.</li><li><b>Second</b> thing to do afterwards.</li></ol>
+</section>
